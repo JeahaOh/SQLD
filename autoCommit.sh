@@ -1,15 +1,17 @@
+echo -e "git clear\n"
 clear
 
-SET yyyymmdd=%DATE:~0,4%%DATE:~5,2%%DATE:~8,2%
-
+echo -e "git status\n"
 git status
 
+echo -e "git pull\n"
+git pull
+
+echo -e "git add .\n"
 git add .
 
-git commit -m '%yyyymmdd%'
+echo -e "git commit -m $(date +%Y%m%d)\n"
+git commit -m "$(date +%Y%m%d)"
 
+echo -e "git push\n"
 git push
-
-::shutdown -s -t 300
-
-@echo PROCESS END. BYE!
